@@ -1,3 +1,9 @@
+# 데모(Demo)
+[click here](https://suhyunified.github.io/vue3-shared-state-example/)  
+.  
+.  
+
+
 # 발단
 Vue3로 넘어오면서 composition api 사용이 가능해짐에 따라 Vuex를 더이상 쓰지 않아도 된다는 말을 들었다.  
 Vue2에서는 필수적인 라이브러리였는데, 그렇다면 Vue3에선 어떻게 상태관리를 하는것인지 궁금해졌다.  
