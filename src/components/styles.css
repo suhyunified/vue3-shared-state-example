@@ -1,0 +1,106 @@
+.setting-group {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  width: 80%;
+  text-align: left;
+}
+
+.setting {
+  display:flex;
+  width: 80%;
+  height: 48px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.setting > label {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  text-align: left;
+}
+
+.setting > input[type="radio"] ~ label {
+  cursor: pointer;
+  flex: 1;
+  
+}
+
+.input-box{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 48px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+  overflow: hidden;
+
+  transition-duration: 0.3s;
+}
+
+.input-box:focus-within {
+  border: 1px solid mediumpurple;
+}
+
+.input-box > input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+}
+
+.input-box > input[type="number"] {
+  text-align: right;
+}
+
+.input-box > .postfix {
+  color: gray;
+  margin-right: 20px;
+}
+
+.button-wrapper {
+  display: flex;
+  width: 80%;
+  justify-content: flex-end;
+}
+
+.save-button {
+  width: 200px;
+  height: 48px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  color: mediumpurple;
+
+  border: 2px solid mediumpurple;
+  border-radius: 6px;
+  background: none;
+
+  transition-duration: 0.3s;
+}
+
+.save-button:hover {
+  color: white;
+  background-color:mediumpurple;
+}
+
+.save-button[disabled], .save-button[disabled]:hover {
+  cursor: default;
+  color: lightgray;
+  border-color: lightgray;
+  background-color: white;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
