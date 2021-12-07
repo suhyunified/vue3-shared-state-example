@@ -39,7 +39,6 @@
 </template>
 
 <script setup>
-import { ref } from '@vue/reactivity';
 import { watch } from '@vue/runtime-core'
 import { useProduct } from './useProduct'
 import { useProductSetting } from './useProductSetting'
@@ -54,7 +53,6 @@ const {
   description: form,
   setForm
 } = useProductSetting()
-
 
 const section = 'description'
 

@@ -1,4 +1,6 @@
 import { computed, reactive } from "@vue/reactivity"
+import api from '../api'
+
 const state = reactive({
   product: {
     description: {
@@ -17,20 +19,6 @@ const state = reactive({
   }
 })
 
-const getDescriptionApi = async () => {
-  return Promise.resolve({
-    name: 'Awesome Product',
-    summary: 'It is a must-have item form 2021',
-  })
-}
-
-const getSalesApi = async() => {
-  return Promise.resolve({
-    price: 20000,
-    isOnSale: true
-  })
-}
-
 export const useProduct = () => {
   /**
    * @param {'description' | 'sales'} section 
@@ -43,10 +31,10 @@ export const useProduct = () => {
   }
 
   const loadProduct = async () => {
-    const description = await getDescriptionApi()
+    const description = await api.getDescriptionApi()
     setProduct('description', description)
     
-    const sales = await getSalesApi()
+    const sales = await api.getSalesApi()
     setProduct('sales', sales)
   }
 
